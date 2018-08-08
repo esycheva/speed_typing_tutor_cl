@@ -1,0 +1,123 @@
+@mixin buttons($name, $color) {
+  $hover: scale_color($color, $saturation: 10%, $lightness: -15%);
+  $disabled: scale_color($color, $saturation: -10%, $lightness: 15%);
+  .button {
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &.#{$name} {
+      &.button-active {
+        background: $color;
+      }
+      &.button-hover {
+        background: $hover;
+      }
+      &.button-disabled {
+        background: $disabled;
+      }
+    }
+  }
+}
+
+@mixin theme($name, $primary_color, $secondary_color) {
+  .theme {
+    padding: 10px;
+    &.#{$name} {
+      background: white;
+      color: black;
+      @include buttons(button-primary, $primary_color);
+      @include buttons(button-secondary, $secondary_color);
+    }
+  }
+}
+
+@include theme(theme-base, #B3B3B3, #7C7C7C);
+@include theme(theme-poppy-1, #27AAEE, #92CF72);
+@include theme(theme-poppy-2, #91CD89, #16AAF2);
+@include theme(theme-lemon-1, #F1CC33, #CDDAE3);
+@include theme(theme-lemon-2, #D6DB5D, #AACA98);
+@include theme(theme-flower-2, #ABDDFE, #F5ACCB);
+@include theme(theme-desert-1, #9F784C, #5BA9ED);
+@include theme(theme-desert-2, #D7B07D, #70ADEC);
+@include theme(theme-desert-3, #2C8AE1, #B19067);
+@include theme(theme-desert-4, #89B3FF, #BF8758);
+@include theme(theme-coast-1, #2C8AE1, #C6B38A);
+@include theme(theme-coast-2, #E6D8B5, #959B43);
+@include theme(theme-coast-3, #BDC8B0, #71B0B2);
+@include theme(theme-tulip-1, #93CA53, #E8E3DF);
+@include theme(theme-field-1, #A0C7FB, #A39004);
+@include theme(theme-field-2, #8FB8F7, #E1DB00);
+
+// .theme {
+//   padding: 10px;
+//   .button {
+//     color: white;
+//     margin: 10px;
+//     padding: 10px;
+//     border: 1px solid transparent;
+//     border-radius: 3px;
+//   }
+
+  // &.theme-poppy-1 {
+  //   background: #F5F5F5;
+  //   color: #141313;
+  //   .button {
+  //     &.button-primary {
+  //       &.button-active {
+  //         background: #27AAEE;
+  //       }
+  //       &.button-hover {
+  //         background: #0D88C8;
+  //       }
+  //       &.button-disabled {
+  //         background: #43BFFF;
+  //       }
+  //     }
+  //     &.button-secondary {
+  //       &.button-active {
+  //         background: #92CF72;
+  //       }
+  //       &.button-hover {
+  //         background: #6CA94C;
+  //       }
+  //       &.button-disabled {
+  //         background: #BDF5A0;
+  //       }
+  //     }
+  //   }
+  // }
+//}
+
+
+
+// .theme.theme-poppy-1 {
+//   background: #F5F5F5;
+//   color: #141313;
+//
+//   .button.button-primary {
+//     &.button-active {
+//       background: #27AAEE;
+//     }
+//     &.button-hover {
+//       background: #0D88C8;
+//     }
+//     &.button-disabled {
+//       background: #43BFFF;
+//     }
+//   }
+//
+//   .button.button-secondary {
+//     &.button-active {
+//       background: #92CF72;
+//     }
+//     &.button-hover {
+//       background: #6CA94C;
+//     }
+//     &.button-disabled {
+//       background: #BDF5A0;
+//     }
+//   }
+// }

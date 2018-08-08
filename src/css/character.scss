@@ -1,0 +1,76 @@
+// The base color - #7C7C7C
+// The darkest color - #101010 (for font color)
+// The danger color - #6d6d6d (for error messages)
+
+
+// $darkest: #101010;
+// $light: white;
+// $danger: #6D6D6D;
+// $primary: #8C8C8C;
+// $muted: #6a6a6a;
+
+$darkest: #2e2624;
+$light: white;
+$danger: #9f784c;
+$primary: #5ba9ed;
+$muted: #2e26244d;
+
+
+.character {
+  color: $darkest;
+}
+
+.character-muted {
+  color: $muted;
+}
+
+.character.character-error {
+  background-color: $danger;
+  color: $light;
+}
+
+.character.character-pointer {
+  background-color: $primary;
+  color: $light;
+}
+
+// gray
+// $base-color: #7C7C7C;
+// $dark-color: #494949;
+// $light-color: #afafaf;
+
+// green
+// $base-color: #91cd89;
+// $dark-color: #67a75f;
+// $light-color: #c2f3bb;
+
+// blue
+// $base-color: #27aaee;
+// $dark-color: #0d88c8;
+// $light-color: #43bfff;
+
+$base-color: #27AAEE;
+$dark-color: #6bee27;
+$light-color: #43bfff;
+
+button {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 3px;
+
+}
+
+button.active-element {
+  background: $base-color;
+}
+
+button.hover-element {
+  background: $dark-color;
+}
+
+button.disable-element {
+  background: $light-color;
+}

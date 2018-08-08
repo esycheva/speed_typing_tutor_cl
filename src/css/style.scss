@@ -1,5 +1,41 @@
-$font-color: green;
+.letter {
+  margin-right: 5px;
+  &.pressed-letter {
+    color: green;
+  }
+  &.current-letter {
+    background: blue;
+    color: white;
+  }
+  &.error-letter {
+    background: red;
+    color: white;
+  }
+}
 
-div {
-  color: $font-color;
+.row {
+  margin: 10px 0;
+  border: solid 1px green;
+  padding: 5px;
+}
+
+.typing {
+  border: solid 1px blue;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.lesson-progress {
+  border: solid 1px #42b4eb;
+  padding: 10px 0;
+}
+
+.lesson-progress-item {
+  margin-right: 5px;
+}
+
+.lesson-container {
+  border: solid 1px red;
+  padding: 20px;
+  width: 600px;
 }
