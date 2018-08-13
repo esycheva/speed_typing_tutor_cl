@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Theme  from './components/theme';
 
+import { ThemeProvider, ThemeConsumer } from './theme-context';
+
+import Header from './components/Header/header';
+
 import '../css/style.scss'; // Import CSS
 
 // base
@@ -21,7 +25,7 @@ import '../css/style.scss'; // Import CSS
 // field-1
 // field-2
 
-//render (<Theme name='base' />, document.getElementById('app'));
+//render (<Theme name='field-2' />, document.getElementById('app'));
 
 class Letter extends Component {
   render(){
@@ -188,4 +192,42 @@ const EXERCISES = [
   {lesson_id: 1, name: 'Другой произвольный текст', text: 'Я вас любил чего же боле'}
 ];
 
-render (<LessonContainer exercises={EXERCISES}/>, document.getElementById('app'));
+class Page extends Component {
+  render() {
+
+    return (
+      <ThemeConsumer>
+        { ({theme}) => <div className={theme}><Header /></div> }
+      </ThemeConsumer>
+    );
+  }
+}
+
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.changeTheme = (e) => {
+      console.log(e.target.value)
+      // this.setState( prevState => ({
+      //   theme:e.target.value
+      // }));
+    };
+
+    this.state = { theme: 'dark', changeTheme: this.changeTheme };
+  }
+
+  render() {
+    return (
+      <ThemeProvider value={this.state} >
+        <Page />
+      </ThemeProvider>
+    );
+  }
+}
+
+render (<App />, document.getElementById('app'));
+
+//render (<LessonContainer exercises={EXERCISES}/>, document.getElementById('app'));
