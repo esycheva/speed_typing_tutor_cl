@@ -1,0 +1,9 @@
+@import './helpers/variables';
+@import './helpers/mixins';
+
+@include themed-header(base, $base-primary-color);
+@include themed-header(desert, $desert-primary-color);
+@include themed-header(poppy, $poppy-primary-color);
+@include themed-header(flower, $flower-primary-color);
+@include themed-header(coast, $coast-primary-color);
+@include themed-header(tulip, $tulip-primary-color);

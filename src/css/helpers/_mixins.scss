@@ -1,0 +1,8 @@
+
+@mixin themed-header($theme, $color) {
+  .#{$theme} {
+    header {
+      background-color: $color;
+    }
+  }
+}

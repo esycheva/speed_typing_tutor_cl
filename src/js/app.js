@@ -10,22 +10,19 @@ import '../css/style.scss'; // Import CSS
 
 // base
 // poppy-1
-// poppy-2
-// lemon-1
-// lemon-2
-// flower-2
-// desert-1
-// desert-2
-// desert-3
-// desert-4
-// coast-1
-// coast-2
-// coast-3
-// tulip-1
-// field-1
-// field-2
 
-//render (<Theme name='field-2' />, document.getElementById('app'));
+
+// flower-2
+
+// desert-2
+
+// coast-1
+
+// tulip-1
+
+
+
+//render (<Theme name='poppy-1' />, document.getElementById('app'));
 
 class Letter extends Component {
   render(){
@@ -210,13 +207,13 @@ class App extends Component {
     super(props);
 
     this.changeTheme = (e) => {
-      console.log(e.target.value)
-      // this.setState( prevState => ({
-      //   theme:e.target.value
-      // }));
+      const value = e.target.value;
+      this.setState( prevState => ({
+        theme: value
+      }));
     };
 
-    this.state = { theme: 'dark', changeTheme: this.changeTheme };
+    this.state = { theme: 'base', changeTheme: this.changeTheme };
   }
 
   render() {

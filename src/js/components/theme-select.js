@@ -7,9 +7,12 @@ class ThemeSelect extends Component {
       <ThemeConsumer>
         { ({theme, changeTheme}) => (
             <select value={theme} onChange={changeTheme}>
-              <option value='light'>light</option>
-              <option value='dark'>dark</option>
+              <option value='base'>base</option>
+              <option value='desert'>desert</option>
+              <option value='poppy'>poppy</option>
+              <option value='flower'>flower</option>
               <option value='coast'>coast</option>
+              <option value='tulip'>tulip</option>
             </select>)
           }
       </ThemeConsumer>

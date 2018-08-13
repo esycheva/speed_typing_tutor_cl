@@ -1,6 +1,6 @@
 @mixin buttons($name, $color) {
-  $hover: scale_color($color, $saturation: 10%, $lightness: -15%);
-  $disabled: scale_color($color, $saturation: -10%, $lightness: 15%);
+  $hover: scale_color($color, $saturation: 10%, $lightness: -12%);
+  $disabled: scale_color($color, $saturation: -10%, $lightness: 20%);
   .button {
     color: white;
     margin: 10px;
